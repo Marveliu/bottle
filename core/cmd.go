@@ -320,9 +320,9 @@ func compileWith(ctx *cli.Context, _codePath, _includeDir, _outputDir string) er
 	if err != nil {
 		return err
 	}
-	if err := ValidWasm(wasm, abires); err != nil {
-		return err
-	}
+	// if err := ValidWasm(wasm, abires); err != nil {
+	// 	return err
+	// }
 
 	cpsPath := path.Join(outputDir, abires.Constructor.Name+".compress")
 	cpsRes := utils.CompressWasmAndAbi(res, wasm, nil)

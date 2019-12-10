@@ -19,7 +19,7 @@ func NewMigrate() Migrate {
 }
 
 func (m Migrate) Compile(ctx *cli.Context) error {
-	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	dir, err := filepath.Abs("/Users/mac/gopath/src/github.com/vntchain/bottle/dev")
 	if err != nil {
 		return err
 	}

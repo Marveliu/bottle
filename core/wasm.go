@@ -27,7 +27,8 @@ var llvmDir = ""
 var sysrootDir = ""
 
 func SetEnvPath() {
-	wasmceptionDir := wasmCeptionFlag
+	// wasmceptionDir := wasmCeptionFlag
+	wasmceptionDir := "/Users/mac/gopath/src/github.com/vntchain/bottle/build/lib/wasmception/wasmception"
 
 	llvmDir = path.Join(wasmceptionDir, "dist")
 	sysrootDir = path.Join(wasmceptionDir, "sysroot")
