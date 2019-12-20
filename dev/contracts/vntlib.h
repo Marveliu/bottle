@@ -14,6 +14,7 @@
   VNT_WASM_EXPORT                         //定义需要导出的方法，该方法可以读取状态变量但不会修改状态变量
 #define EVENT void                        //空宏，声明Event函数时用的关键字
 #define indexed                           //空宏，声明Event函数时，定义需要索引的参数时用到的关键字
+#define REPORT void                       //空宏，声明Event函数时用的关键字
 #define CALL                              //空宏，声明跨合约调用函数时用到的关键字
 #define KEY volatile                      //宏，声明全局变量
 #define constructor VNT_WASM_EXPORT void  //空宏，声明构造函数时使用

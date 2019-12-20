@@ -1,0 +1,51 @@
+#include "vntlib.h"
+
+
+
+
+// ************* 数据定义 begin ************* //
+
+{{range $i, $d := .Datas}}
+
+typedef struct{
+{{range $i, $f := $d.Fields}}
+  {{$f.Type}} {{$f.Name}};   // {{$f.Desc}}
+{{end}}
+}{{$d.Name}};
+
+{{end}}
+
+// ************* 数据定义 end ************* //
+
+
+// ************* 监管接口 begin ************* //
+
+
+
+// ************* 监管接口 end ************* //
+
+
+// 初始化
+constructor {{ .BizName }}()
+{
+
+}
+
+
+// ************* 业务方法 begin ************* //
+
+{{range $i, $t := .Tasks}}
+
+// ************* 业务: {{$t.Name}}, 描述: {{$t.Desc}}
+
+{{range $i, $a := $t.Actions}}
+{{if $a.Mutable}}MUTABLE{{else}}UNMUTABLE{{end}}
+void {{ $a.FuncName }}(){
+
+}
+{{end}}
+
+{{end}}
+
+// ************* 业务方法 end ************* //
+

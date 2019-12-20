@@ -1,0 +1,55 @@
+bizName = "transaction"
+bizType = "1"
+desc = "做个交易"
+version = 1
+no = 321
+
+[[datas]]
+  name = "product"
+  report = "1,2"
+
+  [[datas.fields]]
+    name = "pid"
+    type = "string"
+
+  [[datas.fields]]
+    name = "desc"
+    type = "string"
+
+[[datas]]
+  name = "order"
+  report = "1"
+
+  [[datas.fields]]
+    name = "From"
+    type = "string"
+
+  [[datas.fields]]
+    name = "To"
+    type = "string"
+
+  [[datas.fields]]
+    name = "pid"
+	type = "string"
+
+  [[datas.fields]]
+    name = "value"
+	type = "uint32"
+
+[[tasks]]
+  name = "发布"
+  desc = "发布商品"
+
+  [[tasks.actions]]
+    funcName = "publish"
+    mutable = true
+    dataRef = "product"
+
+[[tasks]]
+  name = "交易"
+  desc = "交易商品"
+
+  [[tasks.actions]]
+    funcName = "transaction"
+    mutable = true
+    dataRef = "order"
