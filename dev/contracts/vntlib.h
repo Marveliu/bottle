@@ -63,7 +63,10 @@ typedef char *address;
 #define TY_POINTER 9
 
 //向监管合约发送信息
-void Report(string data);
+// void Report(string data);
+//向监管合约注册当前业务合约内容
+void RegBizContract(uint64 no);
+
 
 //获取交易发起者地址
 address GetSender();

@@ -21,7 +21,8 @@ EVENT REPORT_order(string name,string From,string To,string pid,uint32 value);
 // 初始化
 constructor transaction()
 {
-	// implement me!
+	// Reg to supervisor!
+	RegBizContract(321);
 }
 
 // ************* 业务方法 begin ************* //
@@ -40,7 +41,7 @@ void publish(){
 // ************* 业务: 交易, 描述: 交易商品
 
 MUTABLE
-void transaction(){
+void trans(){
 
 	// implement me!
 	REPORT_order("order", );

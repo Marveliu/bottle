@@ -10,6 +10,7 @@ EVENT REPORT_transaction(string name, string from, string to, string value);
 constructor BizContract()
 {
     // implement me!
+    RegBizContract(123);
 }
 
 // ************* 业务方法 begin ************* //

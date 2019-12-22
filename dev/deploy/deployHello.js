@@ -22,9 +22,9 @@ function SayHello() {
     console.log(msg);
 }
 
-// common.deploy(abiFile, codeFile);
-SetNickName()
-var contract = vnt.core.contract(abi).at(contractAddress);
-common.watch(contract, 17544)
+common.deploy(abiFile, codeFile);
+// SetNickName()
+// var contract = vnt.core.contract(abi).at(contractAddress);
+// common.watch(contract, 17544)
 
 // SayHello()
